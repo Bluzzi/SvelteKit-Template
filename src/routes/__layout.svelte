@@ -1,11 +1,8 @@
-<nav>
-    <img src="/favicon.png" alt="logo">
+<script>
+    import Navbar from "$lib/components/Navbar.svelte";
+</script>
 
-    <div class="links">
-        <a href=".">Home</a>
-        <a href="components">Components</a>
-    </div>
-</nav>
+<Navbar/>
 
 <div id="main">
     <slot></slot>
@@ -16,37 +13,12 @@
 </footer>
 
 <style>
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        padding: 0 5%;
-
-        height: 60px;
-
-        background-color: rgba(235, 235, 235, 0.555);
-
-        img {
-            height: 80%;
-            width: auto;
-        }
-
-        a {
-            font-size: 1.3em;
-            text-decoration: none;
-            color: black;
-            
-            margin-left: 15px;
-
-            &:hover {
-                border-bottom: solid 4px $color-primary;
-            }
-        }
-    }
-
     #main {
         padding: 30px 25vw;
+
+        @media (max-width: $responsive-bp-tablet){
+            padding: 30px $space-4;
+        }
     }
 
     footer {
@@ -54,6 +26,6 @@
         align-items: center;
         justify-content: center;
 
-        background-color: rgba(235, 235, 235, 0.555);
+        background-color: $color-gray;
     }
 </style>
