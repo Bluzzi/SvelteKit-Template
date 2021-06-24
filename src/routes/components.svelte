@@ -13,8 +13,8 @@
     <Clock/>
 
     <div class="buttons">
-        <Button href="/" external={false} hoverStyle="void" style="margin-right: 10px;">Home</Button>
-        <Button href="https://svelte.dev/" external={true} hoverStyle="brightness" style="margin-right: 10px;">Svelte</Button> 
+        <Button href="/" external={false} hoverStyle="void" style="margin-right: 10px;">Void Hover</Button>
+        <Button href="https://svelte.dev/" external={true} hoverStyle="brightness" style="margin-right: 10px;">Brightness Hover</Button> 
     </div>
 </div>
 
