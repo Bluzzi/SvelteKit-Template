@@ -11,10 +11,7 @@ const config = {
 		},
 		scss: {
 			outputStyle: "compressed",
-			prependData: `
-				@import "./src/lib/scss/variables.scss";
-				@import "./src/lib/scss/base.scss";
-			`
+			prependData: "@import './src/lib/scss/variables.scss';"
 		},
 		postcss: {
 			plugins: [autoprefixer]
