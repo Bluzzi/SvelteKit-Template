@@ -1,6 +1,5 @@
 <script>
     import Button from "$lib/components/elements/Button.svelte";
-    import Clock from "$lib/components/elements/Clock.svelte";
 </script>
 
 <svelte:head>
