@@ -1,7 +1,16 @@
 /* This file is imported by default in all svelte files */
 
 // Colors :
+$color-white: white;
+$color-black: #363636;
+
 $color-primary: #00c58e;
+
+$color-link: #3273dc;
+
+$color-success: #48C78E;
+$color-warning: #FFE08A;
+$color-danger: #F14668;
 
 // Font size :
 $font-size-p: 1.1em;
