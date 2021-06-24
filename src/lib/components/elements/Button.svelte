@@ -30,7 +30,7 @@
         $paddingX: 20px;
 
         padding: $paddingY $paddingX;
-        margin: 5px 20px;
+        margin: $space-1 $space-5;
 
         background-color: $color-primary;
 
