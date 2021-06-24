@@ -1,9 +1,38 @@
+<script>
+    import { onMount } from "svelte";
+
+    // Pages :
+    const navItems = [
+        {name: "Home", route: "/"},
+        {name: "Components", route: "/components"}
+    ];
+
+    // Get the current active page (for the first call) :
+    let currentPage = "";
+
+    onMount(() => {
+        currentPage = location.pathname;
+    });
+
+    // Function for update active page :
+    function changeActive(event: MouseEvent){
+        const element = <HTMLLinkElement>event.target;
+
+        element.parentNode.childNodes.forEach(child => {
+            (child as HTMLLinkElement).classList.remove("active");
+        });
+
+        element.classList.add("active");
+    }
+</script>
+
 <nav>
-    <img src="/favicon.png" alt="logo">
+    <img src="/img/favicon.png" alt="logo">
 
     <div class="links">
-        <a href=".">Home</a>
-        <a href="components">Components</a>
+        {#each navItems as item}
+            <a href={item.route} class={currentPage === item.route ? "active" : ""} on:click={event => changeActive(event)}>{item.name}</a>    
+        {/each}
     </div>
 </nav>
 
@@ -31,7 +60,7 @@
             
             margin-left: 15px;
 
-            &:hover {
+            &:hover, &.active {
                 border-bottom: solid 4px $color-primary;
             }
         }
