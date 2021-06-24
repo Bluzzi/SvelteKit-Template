@@ -28,8 +28,6 @@
 
 		p {
 			margin: 5px;
-
-			font-size: $font-size-p;
 		}
 	}
 </style>

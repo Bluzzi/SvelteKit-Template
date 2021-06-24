@@ -4,10 +4,12 @@
     export let href: string = "";
     export let external: boolean = false;
 
+    export let style: string = "";
+
     export let hoverStyle: HoverStyle;
 </script>
 
-<a href={href} target={external ? "_blank" : ""} class={hoverStyle}>
+<a href={href} target={external ? "_blank" : ""} class={hoverStyle} style={style}>
     <slot></slot>
 </a>
 
@@ -20,7 +22,6 @@
         text-transform: uppercase;
         text-decoration: none;
         color: white;
-        font-size: $font-size-p;
 
         width: max-content;
 
@@ -30,7 +31,6 @@
         $paddingX: 20px;
 
         padding: $paddingY $paddingX;
-        margin: $space-1 $space-5;
 
         background-color: $color-primary;
 

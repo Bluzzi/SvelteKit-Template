@@ -12,9 +12,3 @@
 </script>
 
 <p>{currentTime}</p>
-
-<style>
-    p {
-        font-size: $font-size-p;
-    }
-</style>
