@@ -14,5 +14,22 @@
     export let message;
 </script>
 
-<p>{errorCode}</p>
-<p>{message}</p>
+<div class="error">
+	<p>Error {errorCode}</p>
+	<p>{message}</p>
+</div>
+
+<style>
+	.error {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		p {
+			margin: 5px;
+
+			font-size: $font-size-p;
+		}
+	}
+</style>
