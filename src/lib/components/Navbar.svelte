@@ -10,19 +10,12 @@
     // Get the current active page (for the first call) :
     let currentPage = "";
 
-    onMount(() => {
-        currentPage = location.pathname;
-    });
+    onMount(() => currentPage = location.pathname);
 
     // Function for update active page :
-    function changeActive(event: MouseEvent){
-        const element = <HTMLLinkElement>event.target;
-
-        element.parentNode.childNodes.forEach(child => {
-            (child as HTMLLinkElement).classList.remove("active");
-        });
-
-        element.classList.add("active");
+    function changeActive(element: EventTarget){
+        document.getElementsByClassName("active")[0].classList.remove("active");
+        (element as HTMLLinkElement).classList.add("active");
     }
 </script>
 
@@ -31,7 +24,7 @@
 
     <div class="links">
         {#each navItems as item}
-            <a href={item.route} class={currentPage === item.route ? "active" : ""} on:click={event => changeActive(event)}>{item.name}</a>    
+            <a href={item.route} class={currentPage === item.route ? "active" : ""} on:click={event => changeActive(event.target)}>{item.name}</a>    
         {/each}
     </div>
 </nav>
