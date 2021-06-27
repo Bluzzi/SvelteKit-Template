@@ -1,6 +1,7 @@
 {
-  "name": "tgm",
-  "version": "0.0.1",
+  "name": "svelte-website-template",
+  "version": "0.9.0",
+  "type": "module",
   "scripts": {
     "start": "set PORT=3000 && node build",
     "dev": "svelte-kit dev",
@@ -21,7 +22,6 @@
     "tslib": "^2.0.0",
     "typescript": "^4.0.0"
   },
-  "type": "module",
   "dependencies": {
     "dayjs": "^1.10.5"
   }
