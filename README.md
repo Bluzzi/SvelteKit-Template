@@ -21,7 +21,7 @@ You can then launch the site in development mode with the command :
 npm run dev
 ```
 
-Then in production mode (you can change the port in the ``package.json`` file) :
+Or in production mode (you can change the port in the ``package.json`` file) :
 ```sh
 npm run build
 npm run start
